@@ -1,134 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Design portfolio of Amir Williams - Mechanical Engineering student specializing in mechanical design.">
-    <meta name="author" content="Amir Williams">
-    <title>Portfolio - Amir Williams</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Design portfolio of Amir Williams - Mechanical Engineering student specializing in mechanical design.">
+  <meta name="author" content="Amir Williams">
+  <title>Portfolio - Amir Williams</title>
 
-    <style>
-        :root {
-            --primary-color: #005792;
-            --secondary-color: #f4a261;
-            --background-color: #f9f9f9;
-            --text-color: #333;
-        }
+  <style>
+    :root {
+      --primary-color: #005792;
+      --secondary-color: #f4a261;
+      --background-color: #f9f9f9;
+      --text-color: #333;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            text-align: center;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      text-align: center;
+    }
 
-        header {
-            background-color: var(--primary-color);
-            color: #fff;
-            padding: 2rem 1rem;
-        }
+    header {
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 2rem 1rem;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
 
-        section {
-            padding: 3rem 1rem;
-            max-width: 1000px;
-            margin: auto;
-        }
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-        section h2 {
-            color: var(--primary-color);
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
+    section h2 {
+      color: var(--primary-color);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
 
-        .project {
-            background: #fff;
-            margin: 2rem 0;
-            padding: 2rem;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
+    .project {
+      background: #fff;
+      margin: 2rem 0;
+      padding: 2rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
 
-        .project h3 {
-            margin-top: 0;
-            color: var(--secondary-color);
-        }
+    .project h3 {
+      margin-top: 0;
+      color: var(--secondary-color);
+    }
 
-        .project p {
-            margin: 1rem 0;
-        }
+    .project p {
+      margin: 1rem 0;
+    }
 
-        footer {
-            background-color: var(--primary-color);
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
-        }
+    .project-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
 
-        footer p {
-            margin: 0;
-        }
+    .project-gallery img {
+      width: 30%;
+      border-radius: 8px;
+    }
 
-        a.back-button {
-            display: inline-block;
-            margin-top: 2rem;
-            padding: 1rem 2rem;
-            color: #fff;
-            background-color: var(--secondary-color);
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2rem;
-            transition: background-color 0.3s;
-        }
+    footer {
+      background-color: var(--primary-color);
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
 
-        a.back-button:hover {
-            background-color: #e76f51;
-        }
-    </style>
+    footer p {
+      margin: 0;
+    }
+
+    a.back-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      color: #fff;
+      background-color: var(--secondary-color);
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: background-color 0.3s;
+    }
+
+    a.back-button:hover {
+      background-color: #e76f51;
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <h1>My Design Portfolio</h1>
-    </header>
+  <header>
+    <h1>My Design Portfolio</h1>
+  </header>
 
-    <section>
-        <h2>Featured Projects</h2>
+  <section>
+    <h2>Featured Projects</h2>
 
-        <div class="project">
-            <h3>Steering Column Design - Bronco Baja Racing</h3>
-            <p>Designed a lightweight and durable custom steering column using SolidWorks for the 2025 Baja vehicle. Focused on ergonomic adjustability and off-road performance.</p>
-            <p><strong>Skills used:</strong> SolidWorks, Mechanical Design, Manufacturing Considerations</p>
-        </div>
+    <div class="project">
+      <h3>First Pedal Design</h3>
+      <div class="project-gallery">
+        <img src="images/first-pedal-1.png" alt="First Pedal Design 1">
+        <img src="images/first-pedal-2.png" alt="First Pedal Design 2">
+        <img src="images/first-pedal-3.png" alt="First Pedal Design 3">
+      </div>
+      <p>Developed the initial pedal design focusing on ergonomic fit and durability under rugged off-road racing conditions. Key features included adjustability and a lightweight frame.</p>
+      <p><strong>Skills used:</strong> SolidWorks, Mechanical Design, Pedal Mechanics</p>
+    </div>
 
-        <div class="project">
-            <h3>Accelerator Pedal Assembly</h3>
-            <p>Engineered an adjustable accelerator pedal assembly emphasizing reliability under off-road conditions. Integrated a return spring and optimized pedal travel range.</p>
-            <p><strong>Skills used:</strong> CAD Modeling, Design for Manufacturing, Mechanical Systems</p>
-        </div>
+    <div class="project">
+      <h3>Steering Column</h3>
+      <div class="project-gallery">
+        <img src="images/steering-column-1.png" alt="Steering Column 1">
+        <img src="images/steering-column-2.png" alt="Steering Column 2">
+        <img src="images/steering-column-3.png" alt="Steering Column 3">
+      </div>
+      <p>Designed a custom lightweight steering column for the 2025 Baja vehicle. Focused on strength, ergonomic placement, and integration with the steering assembly and driver cockpit layout.</p>
+      <p><strong>Skills used:</strong> SolidWorks, CAD Assembly Design, Ergonomics</p>
+    </div>
 
-        <div class="project">
-            <h3>Power Distribution Box with Switches</h3>
-            <p>Created a custom electrical box for managing four-wheel drive and other vehicle systems with easy-to-use toggle switches, focusing on robustness and modularity.</p>
-            <p><strong>Skills used:</strong> SolidWorks, Wiring Design, Systems Integration</p>
-        </div>
+    <div class="project">
+      <h3>Steering Column Bracket</h3>
+      <div class="project-gallery">
+        <img src="images/steering-column-bracket-1.png" alt="Steering Column Bracket 1">
+        <img src="images/steering-column-bracket-2.png" alt="Steering Column Bracket 2">
+      </div>
+      <p>Engineered a specialized bracket to secure the steering column with optimized support and vibration reduction, ensuring reliability during off-road performance.</p>
+      <p><strong>Skills used:</strong> Structural Design, Finite Element Analysis (FEA) basics, SolidWorks</p>
+    </div>
 
-        <a class="back-button" href="index.html">← Back to Home</a>
-    </section>
+    <div class="project">
+      <h3>New Pedal Design</h3>
+      <div class="project-gallery">
+        <img src="images/new-pedal-1.png" alt="New Pedal Design 1">
+        <img src="images/new-pedal-2.png" alt="New Pedal Design 2">
+      </div>
+      <p>Redesigned the pedal system to improve responsiveness and comfort. Integrated lessons learned from the first design with enhanced mechanical efficiency and adjustability features.</p>
+      <p><strong>Skills used:</strong> SolidWorks, Mechanical Redesign, User Experience Improvements</p>
+    </div>
 
-    <footer>
-        <p>&copy; 2025 Amir Williams. All rights reserved.</p>
-    </footer>
+    <div class="project">
+      <h3>Switch Box</h3>
+      <div class="project-gallery">
+        <img src="images/switch-box-1.png" alt="Switch Box 1">
+        <img src="images/switch-box-2.png" alt="Switch Box 2">
+      </div>
+      <p>Created a compact and modular switch box to manage four-wheel drive controls and auxiliary systems for the Baja vehicle. Designed for rugged environments with easy access toggle switches and secured wiring integration.</p>
+      <p><strong>Skills used:</strong> SolidWorks, Electrical Systems Design, Mechanical Integration</p>
+    </div>
+
+    <div class="project">
+      <h3>Steering Yoke</h3>
+      <div class="project-gallery">
+        <img src="images/steering-yoke-1.png" alt="Steering Yoke 1">
+        <img src="images/steering-yoke-2.png" alt="Steering Yoke 2">
+      </div>
+      <p>Designed and optimized a steering yoke to connect critical steering components, focusing on strength, minimal weight, and efficient manufacturing for off-road performance.</p>
+      <p><strong>Skills used:</strong> SolidWorks, Mechanical Linkages, CAD Assembly Design</p>
+    </div>
+
+    <a class="back-button" href="index.html">← Back to Home</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Amir Williams. All rights reserved.</p>
+  </footer>
 </body>
 </html>
