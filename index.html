@@ -58,8 +58,9 @@
       font-size: 1.1rem;
     }
 
-    /* Buttons = Brown */
-    .button {
+    /* Buttons = Brown, including visited state */
+    a.button:link,
+    a.button:visited {
       display: inline-block;
       padding: 1rem 2rem;
       margin-top: 2rem;
@@ -69,11 +70,12 @@
       border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
-      transition: background-color 0.3s;
       font-size: 1.2rem;
+      transition: background-color 0.3s;
     }
 
-    .button:hover {
+    a.button:hover,
+    a.button:active {
       background-color: var(--wmu-brown-dark);
     }
 
@@ -132,15 +134,8 @@
   <section>
     <h2>Explore My Work</h2>
     <p>Click below to explore my design portfolio.</p>
-    <!-- Scrolls to portfolio section instead of new tab -->
-    <a class="button" href="#portfolio">View Portfolio</a>
-  </section>
-
-  <!-- Portfolio section is part of this page -->
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <p>Selected design work and projects will be featured here.</p>
-    <!-- You can add your project cards, images, etc. -->
+    <!-- Goes to portfolio.html -->
+    <a class="button" href="portfolio.html">View Portfolio</a>
   </section>
 
   <footer>
