@@ -10,11 +10,16 @@
   <style>
     :root {
       --primary-color: #FFB612;       /* WMU Gold */
-      --secondary-color: #522D80;     /* WMU Purple */
+      --secondary-color: #522D80;     /* Accent Purple */
       --background-color: #f9f9f9;
       --text-color: #333;
       --wmu-brown: #4E3629;           /* WMU Brown */
+      --wmu-brown-dark: #3a281e;
     }
+
+    html { scroll-behavior: smooth; }
+
+    * { box-sizing: border-box; }
 
     body {
       font-family: Arial, sans-serif;
@@ -25,110 +30,119 @@
       line-height: 1.6;
     }
 
+    /* Header = Brown (requested) */
     header {
-      background-color: var(--primary-color);
+      background-color: var(--wmu-brown);
       color: #fff;
-      padding: 2rem 1rem;
+      padding: 1.5rem 1rem;
       text-align: center;
     }
 
+    /* Hero trimmed so portfolio appears on first screen */
     .hero {
-      padding: 5rem 1rem;
+      padding: 2.5rem 1rem;
       text-align: center;
       background-color: #fff;
     }
 
     .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+      font-size: clamp(2rem, 3vw + 1rem, 3rem);
+      margin: 0 0 1rem 0;
+      line-height: 1.2;
     }
 
     .hero a.portfolio-button {
       display: inline-block;
-      margin-top: 1rem;
+      margin-top: 0.75rem;
       padding: 1rem 2rem;
       background-color: var(--wmu-brown);
       color: white;
       text-decoration: none;
       border-radius: 6px;
       font-weight: bold;
-      font-size: 1.2rem;
-      transition: background-color 0.3s ease;
+      font-size: 1.1rem;
+      transition: background-color 0.2s ease, transform 0.05s ease;
     }
-
-    .hero a.portfolio-button:hover {
-      background-color: #3a281e;
-    }
+    .hero a.portfolio-button:hover { background-color: var(--wmu-brown-dark); }
+    .hero a.portfolio-button:active { transform: translateY(1px); }
+    .hero a.portfolio-button:focus { outline: 3px solid var(--primary-color); outline-offset: 2px; }
 
     section {
-      padding: 3rem 1rem;
-      max-width: 1000px;
+      padding: 2.25rem 1rem;
+      max-width: 1100px;
       margin: auto;
       text-align: center;
     }
 
     section h2 {
       color: var(--primary-color);
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      font-size: clamp(1.6rem, 2vw + 1rem, 2.2rem);
+      margin: 0 0 1rem 0;
     }
 
     .project {
       background: #fff;
-      margin: 2rem 0;
-      padding: 2rem;
+      margin: 1.25rem 0;
+      padding: 1.5rem;
       border: 1px solid #ddd;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
       text-align: left;
     }
 
     .project h3 {
-      margin-top: 0;
+      margin: 0 0 0.5rem 0;
       color: var(--secondary-color);
+      font-size: 1.3rem;
     }
 
     .project-gallery {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 0.75rem;
       justify-content: center;
-      margin-top: 1rem;
+      margin-top: 0.75rem;
     }
 
     .project-gallery img {
-      width: 30%;
+      flex: 1 1 300px;
+      max-width: 32%;
+      min-width: 220px;
+      height: 200px;
+      object-fit: cover;
       border-radius: 8px;
+      border: 1px solid #e5e5e5;
+      background: #eee;
     }
 
+    ul { padding-left: 1.2rem; }
+    li { margin: 0.25rem 0; }
+
+    /* Back button (kept brown) */
     a.back-button {
       display: inline-block;
-      margin: 3rem auto 1rem;
-      padding: 1rem 2rem;
+      margin: 2rem auto 0.5rem;
+      padding: 0.9rem 1.5rem;
       background-color: var(--wmu-brown);
       color: #fff;
       text-decoration: none;
       border-radius: 6px;
       font-weight: bold;
-      font-size: 1.2rem;
-      transition: background-color 0.3s ease;
+      font-size: 1rem;
+      transition: background-color 0.2s ease, transform 0.05s ease;
     }
-
-    a.back-button:hover {
-      background-color: #3a281e;
-    }
+    a.back-button:hover { background-color: var(--wmu-brown-dark); }
+    a.back-button:active { transform: translateY(1px); }
 
     footer {
-      background-color: var(--primary-color);
+      background-color: var(--wmu-brown);
       color: #fff;
       text-align: center;
       padding: 1rem 0;
       margin-top: 2rem;
     }
 
-    footer p {
-      margin: 0;
-    }
+    footer p { margin: 0; }
   </style>
 </head>
 
@@ -138,80 +152,80 @@
     <p>&#128187; Amir Williams – Mechanical Engineering Portfolio</p>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero">
     <h1>Welcome to My Design Portfolio</h1>
     <a href="#portfolio" class="portfolio-button">View My Portfolio</a>
   </section>
 
-  <!-- Portfolio Section -->
-  <section id="portfolio">
+  <!-- Portfolio -->
+  <section id="portfolio" aria-label="Featured Projects">
     <h2>Featured Projects</h2>
 
     <div class="project">
       <h3>First Pedal Design</h3>
       <div class="project-gallery">
-        <img src="images/first-pedal-1.png" alt="First Pedal Design 1" />
-        <img src="images/first-pedal-2.png" alt="First Pedal Design 2" />
-        <img src="images/first-pedal-3.png" alt="First Pedal Design 3" />
+        <img src="images/first-pedal-1.png" alt="First Pedal Design view 1">
+        <img src="images/first-pedal-2.png" alt="First Pedal Design view 2">
+        <img src="images/first-pedal-3.png" alt="First Pedal Design view 3">
       </div>
-      <p>Developed the initial pedal design focusing on ergonomic fit and durability under rugged off-road racing conditions. Key features included adjustability and a lightweight frame.</p>
+      <p>Initial pedal design focused on ergonomic fit and durability for rugged off-road racing. Features include adjustability and a lightweight structure.</p>
     </div>
 
     <div class="project">
       <h3>Steering Column</h3>
       <div class="project-gallery">
-        <img src="images/steering-column-1.png" alt="Steering Column 1" />
-        <img src="images/steering-column-2.png" alt="Steering Column 2" />
-        <img src="images/steering-column-3.png" alt="Steering Column 3" />
+        <img src="images/steering-column-1.png" alt="Steering column assembly render">
+        <img src="images/steering-column-2.png" alt="Steering column detail view">
+        <img src="images/steering-column-3.png" alt="Steering column cockpit integration">
       </div>
-      <p>Designed a custom lightweight steering column for the 2025 Baja vehicle. Focused on strength, ergonomic placement, and integration with the steering assembly and driver cockpit layout.</p>
+      <p>Custom lightweight steering column for the 2025 Baja vehicle, optimized for strength, ergonomics, and cockpit integration.</p>
     </div>
 
     <div class="project">
       <h3>Steering Column Bracket</h3>
       <div class="project-gallery">
-        <img src="images/steering-column-bracket-1.png" alt="Steering Column Bracket 1" />
-        <img src="images/steering-column-bracket-2.png" alt="Steering Column Bracket 2" />
+        <img src="images/steering-column-bracket-1.png" alt="Steering column bracket view 1">
+        <img src="images/steering-column-bracket-2.png" alt="Steering column bracket view 2">
       </div>
-      <p>Engineered a bracket to secure the steering column with optimized support and vibration reduction.</p>
+      <p>Bracket engineered to secure the steering column with improved support and vibration reduction.</p>
     </div>
   </section>
 
-  <!-- Controls Subteam Section -->
+  <!-- Controls Subteam -->
   <section id="controls-subteam">
     <h2>Controls Subteam</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-start; text-align: left;">
-      <div style="flex: 1 1 300px;">
-        <p>I worked on Chassis Controls for Bronco Baja Racing, including:</p>
+    <div style="display:flex; flex-wrap:wrap; gap:1rem; align-items:flex-start; text-align:left;">
+      <div style="flex:1 1 300px;">
+        <p>Chassis Controls contributions:</p>
         <ul>
-          <li>Wiring a custom power distribution box</li>
-          <li>Creating a switch panel for 4WD and lights</li>
-          <li>Sensor integration using Raspberry Pi + Pico</li>
+          <li>Custom power distribution box</li>
+          <li>Switch panel for 4WD and lights</li>
+          <li>Sensor integration via Raspberry Pi + Pico</li>
         </ul>
-        <p>This improved system diagnostics and functionality during testing.</p>
+        <p>Improved diagnostics and functionality during testing.</p>
       </div>
-      <div style="flex: 1 1 300px;">
-        <img src="images/controls_box.jpg" alt="Controls Subteam Project" style="width:100%; border-radius: 12px;" />
+      <div style="flex:1 1 300px;">
+        <img src="images/controls_box.jpg" alt="Controls subteam wiring and PDB" style="width:100%; border-radius:12px; height:260px; object-fit:cover; border:1px solid #e5e5e5;" />
       </div>
     </div>
   </section>
 
-  <!-- 3D Printing Section -->
+  <!-- 3D Printing -->
   <section id="3d-printing">
     <h2>3D Printing</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-start; text-align: left;">
-      <div style="flex: 1 1 300px;">
-        <p>I use my <strong>Bambu Lab X1 Carbon</strong> with AMS for multi-material prototyping. 3D printing enables rapid testing and refinement of mechanical parts before final manufacturing.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:1rem; align-items:flex-start; text-align:left;">
+      <div style="flex:1 1 300px;">
+        <p><strong>Bambu Lab X1 Carbon</strong> with AMS for multi-material prototyping. 3D printing accelerates iterative testing before final manufacturing.</p>
       </div>
-      <div style="flex: 1 1 300px;">
-        <img src="images/3d_printer.jpg" alt="Bambu X1C" style="width:100%; border-radius: 12px;" />
+      <div style="flex:1 1 300px;">
+        <img src="images/3d_printer.jpg" alt="Bambu X1C printer" style="width:100%; border-radius:12px; height:260px; object-fit:cover; border:1px solid #e5e5e5;" />
       </div>
     </div>
   </section>
 
   <!-- Back Button -->
-  <div style="text-align: center;">
+  <div style="text-align:center;">
     <a class="back-button" href="index.html">← Back to Home</a>
   </div>
 
