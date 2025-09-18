@@ -29,16 +29,30 @@
       text-align: center;
     }
 
-    /* Header stays GOLD */
+    /* Header layout */
     header {
       background-color: var(--primary-color);
       color: #fff;
-      padding: 2rem 1rem;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     header h1 {
       margin: 0;
       font-size: 2.5rem;
+    }
+
+    .header-right a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--wmu-brown);
+      font-weight: bold;
+    }
+
+    .header-right a:hover {
+      text-decoration: underline;
     }
 
     section {
@@ -109,6 +123,10 @@
 <body>
   <header>
     <h1>Amir Williams</h1>
+    <div class="header-right">
+      <a href="https://wmich.joinhandshake.com/profiles/6j5p2z" target="_blank">Handshake</a>
+      <a href="https://www.linkedin.com/in/amir-williams-641884b1" target="_blank">LinkedIn</a>
+    </div>
   </header>
 
   <section>
