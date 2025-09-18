@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Design portfolio of Amir Williams - Mechanical Engineering student specializing in mechanical design.">
-  <meta name="author" content="Amir Williams">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Design portfolio of Amir Williams - Mechanical Engineering student specializing in mechanical design."/>
+  <meta name="author" content="Amir Williams" />
   <title>Portfolio - Amir Williams</title>
 
   <style>
     :root {
-      --primary-color: #FFB612;
-      --secondary-color: #522D80;
+      --primary-color: #FFB612;       /* WMU Gold */
+      --secondary-color: #522D80;     /* WMU Purple */
       --background-color: #f9f9f9;
       --text-color: #333;
+      --wmu-brown: #4E3629;           /* WMU Brown */
     }
 
     body {
@@ -80,6 +81,23 @@
       border-radius: 8px;
     }
 
+    a.back-button {
+      display: inline-block;
+      margin: 3rem auto 1rem;
+      padding: 1rem 2rem;
+      background-color: var(--wmu-brown);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease;
+    }
+
+    a.back-button:hover {
+      background-color: #3a281e;
+    }
+
     footer {
       background-color: var(--primary-color);
       color: #fff;
@@ -90,23 +108,6 @@
 
     footer p {
       margin: 0;
-    }
-
-    a.back-button {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 1rem 2rem;
-      color: #fff;
-      background-color: var(--secondary-color);
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.2rem;
-      transition: background-color 0.3s;
-    }
-
-    a.back-button:hover {
-      background-color: #e76f51;
     }
   </style>
 </head>
@@ -122,9 +123,9 @@
     <div class="project">
       <h3>First Pedal Design</h3>
       <div class="project-gallery">
-        <img src="images/first-pedal-1.png" alt="First Pedal Design 1">
-        <img src="images/first-pedal-2.png" alt="First Pedal Design 2">
-        <img src="images/first-pedal-3.png" alt="First Pedal Design 3">
+        <img src="images/first-pedal-1.png" alt="First Pedal Design 1" />
+        <img src="images/first-pedal-2.png" alt="First Pedal Design 2" />
+        <img src="images/first-pedal-3.png" alt="First Pedal Design 3" />
       </div>
       <p>Developed the initial pedal design focusing on ergonomic fit and durability under rugged off-road racing conditions. Key features included adjustability and a lightweight frame.</p>
       <p><strong>Skills used:</strong> SolidWorks, Mechanical Design, Pedal Mechanics</p>
@@ -133,9 +134,9 @@
     <div class="project">
       <h3>Steering Column</h3>
       <div class="project-gallery">
-        <img src="images/steering-column-1.png" alt="Steering Column 1">
-        <img src="images/steering-column-2.png" alt="Steering Column 2">
-        <img src="images/steering-column-3.png" alt="Steering Column 3">
+        <img src="images/steering-column-1.png" alt="Steering Column 1" />
+        <img src="images/steering-column-2.png" alt="Steering Column 2" />
+        <img src="images/steering-column-3.png" alt="Steering Column 3" />
       </div>
       <p>Designed a custom lightweight steering column for the 2025 Baja vehicle. Focused on strength, ergonomic placement, and integration with the steering assembly and driver cockpit layout.</p>
       <p><strong>Skills used:</strong> SolidWorks, CAD Assembly Design, Ergonomics</p>
@@ -144,8 +145,8 @@
     <div class="project">
       <h3>Steering Column Bracket</h3>
       <div class="project-gallery">
-        <img src="images/steering-column-bracket-1.png" alt="Steering Column Bracket 1">
-        <img src="images/steering-column-bracket-2.png" alt="Steering Column Bracket 2">
+        <img src="images/steering-column-bracket-1.png" alt="Steering Column Bracket 1" />
+        <img src="images/steering-column-bracket-2.png" alt="Steering Column Bracket 2" />
       </div>
       <p>Engineered a specialized bracket to secure the steering column with optimized support and vibration reduction, ensuring reliability during off-road performance.</p>
       <p><strong>Skills used:</strong> Structural Design, Finite Element Analysis (FEA) basics, SolidWorks</p>
@@ -154,9 +155,9 @@
     <div class="project">
       <h3>New Pedal Design</h3>
       <div class="project-gallery">
-        <img src="images/new-pedal-1.png" alt="New Pedal Design 1">
-        <img src="images/new-pedal-2.png" alt="New Pedal Design 2">
-        <img src="images/new-pedal-3.png" alt="New Pedal Design 3">
+        <img src="images/new-pedal-1.png" alt="New Pedal Design 1" />
+        <img src="images/new-pedal-2.png" alt="New Pedal Design 2" />
+        <img src="images/new-pedal-3.png" alt="New Pedal Design 3" />
       </div>
       <p>Redesigned the pedal system to improve responsiveness and comfort. Integrated lessons learned from the first design with enhanced mechanical efficiency and adjustability features.</p>
       <p><strong>Skills used:</strong> SolidWorks, Mechanical Redesign, User Experience Improvements</p>
@@ -165,8 +166,8 @@
     <div class="project">
       <h3>Switch Box</h3>
       <div class="project-gallery">
-        <img src="images/switch-box-1.png" alt="Switch Box 1">
-        <img src="images/switch-box-2.png" alt="Switch Box 2">
+        <img src="images/switch-box-1.png" alt="Switch Box 1" />
+        <img src="images/switch-box-2.png" alt="Switch Box 2" />
       </div>
       <p>Created a compact and modular switch box to manage four-wheel drive controls and auxiliary systems for the Baja vehicle. Designed for rugged environments with easy access toggle switches and secured wiring integration.</p>
       <p><strong>Skills used:</strong> SolidWorks, Electrical Systems Design, Mechanical Integration</p>
@@ -175,53 +176,56 @@
     <div class="project">
       <h3>Steering Yoke</h3>
       <div class="project-gallery">
-        <img src="images/steering-yoke-1.png" alt="Steering Yoke 1">
-        <img src="images/steering-yoke-2.png" alt="Steering Yoke 2">
-        <img src="images/steering-yoke-3.png" alt="Steering Yoke 3">
-        <img src="images/steering-yoke-4.png" alt="Steering Yoke 4">
-        <img src="images/steering-yoke-5.png" alt="Steering Yoke 5">
-        <img src="images/steering-yoke-6.png" alt="Steering Yoke 6">
+        <img src="images/steering-yoke-1.png" alt="Steering Yoke 1" />
+        <img src="images/steering-yoke-2.png" alt="Steering Yoke 2" />
+        <img src="images/steering-yoke-3.png" alt="Steering Yoke 3" />
+        <img src="images/steering-yoke-4.png" alt="Steering Yoke 4" />
+        <img src="images/steering-yoke-5.png" alt="Steering Yoke 5" />
+        <img src="images/steering-yoke-6.png" alt="Steering Yoke 6" />
       </div>
       <p>Designed and optimized a steering yoke to connect critical steering components, focusing on strength, minimal weight, and efficient manufacturing for off-road performance.</p>
       <p><strong>Skills used:</strong> SolidWorks, Mechanical Linkages, CAD Assembly Design</p>
     </div>
+  </section>
 
-    <a class="back-button" href="index.html">← Back to Home</a>
+  <!-- Controls Subteam Section -->
+  <section id="controls-subteam" class="project-section">
+    <h2>Controls Subteam</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-start;">
+      <div style="flex: 1 1 300px;">
+        <p>As a key contributor to the <strong>Chassis Controls Subteam</strong> for Bronco Baja Racing, I’ve worked on integrating electronic systems to monitor and control various aspects of our off-road vehicle. This includes:</p>
+        <ul>
+          <li>Designing and wiring the <strong>power distribution box</strong> to supply and control subsystems</li>
+          <li>Developing a switch panel to toggle <strong>four-wheel drive</strong> and other key functions</li>
+          <li>Implementing sensors and displays for real-time vehicle data (e.g. speed, temperature)</li>
+          <li>Using a Raspberry Pi + Pico to interface with sensors and display information</li>
+        </ul>
+        <p>This work has helped improve vehicle reliability and made debugging and testing far more efficient during competition prep.</p>
+      </div>
+      <div style="flex: 1 1 300px;">
+        <img src="images/controls_box.jpg" alt="Controls Subteam Project" style="width:100%; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+      </div>
+    </div>
   </section>
 
   <!-- 3D Printing Section -->
-<section id="3d-printing" class="project-section">
-  <h2>3D Printing</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-start;">
-    <div style="flex: 1 1 300px;">
-      <p>I have a strong interest in 3D printing and regularly use it to support my design work and prototyping. I currently own a <strong>Bambu Lab X1 Carbon</strong> with the <strong>Automatic Material System (AMS)</strong>, allowing me to print with multiple colors and materials efficiently.</p>
-      <p>This capability has helped me rapidly iterate mechanical components and validate designs before moving to final production.</p>
+  <section id="3d-printing" class="project-section">
+    <h2>3D Printing</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-start;">
+      <div style="flex: 1 1 300px;">
+        <p>I have a strong interest in 3D printing and regularly use it to support my design work and prototyping. I currently own a <strong>Bambu Lab X1 Carbon</strong> with the <strong>Automatic Material System (AMS)</strong>, allowing me to print with multiple colors and materials efficiently.</p>
+        <p>This capability has helped me rapidly iterate mechanical components and validate designs before moving to final production.</p>
+      </div>
+      <div style="flex: 1 1 300px;">
+        <img src="images/3d_printer.jpg" alt="Bambu X1C 3D Printer" style="width:100%; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+      </div>
     </div>
-    <div style="flex: 1 1 300px;">
-      <img src="images/3d_printer.jpg" alt="Bambu X1C 3D Printer" style="width:100%; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-    </div>
-  </div>
-</section>
-<!-- Controls Subteam Section -->
-<section id="controls-subteam" class="project-section">
-  <h2>Controls Subteam</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-start;">
-    <div style="flex: 1 1 300px;">
-      <p>As a key contributor to the <strong>Chassis Controls Subteam</strong> for Bronco Baja Racing, I’ve worked on integrating electronic systems to monitor and control various aspects of our off-road vehicle. This includes:</p>
-      <ul>
-        <li>Designing and wiring the <strong>power distribution box</strong> to supply and control subsystems</li>
-        <li>Developing a switch panel to toggle <strong>four-wheel drive</strong> and other key functions</li>
-        <li>Implementing sensors and displays for real-time vehicle data (e.g. speed, temperature)</li>
-        <li>Using a Raspberry Pi + Pico to interface with sensors and display information</li>
-      </ul>
-      <p>This work has helped improve vehicle reliability and made debugging and testing far more efficient during competition prep.</p>
-    </div>
-    <div style="flex: 1 1 300px;">
-      <img src="images/controls_box.jpg" alt="Controls Subteam Project" style="width:100%; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-    </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Back Button -->
+  <div style="text-align: center;">
+    <a class="back-button" href="index.html">← Back to Home</a>
+  </div>
 
   <footer>
     <p>&copy; 2025 Amir Williams. All rights reserved.</p>
