@@ -37,6 +37,23 @@
       font-size: 2.5rem;
     }
 
+    a.portfolio-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--wmu-brown);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    a.portfolio-button:hover {
+      background-color: #3a281e;
+    }
+
     section {
       padding: 3rem 1rem;
       max-width: 1000px;
@@ -115,9 +132,10 @@
 <body>
   <header>
     <h1>My Design Portfolio</h1>
+    <a href="#portfolio" class="portfolio-button">View My Portfolio</a>
   </header>
 
-  <section>
+  <section id="portfolio">
     <h2>Featured Projects</h2>
 
     <div class="project">
