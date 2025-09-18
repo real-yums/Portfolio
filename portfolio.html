@@ -18,57 +18,26 @@
     }
 
     html { scroll-behavior: smooth; }
-
     * { box-sizing: border-box; }
 
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
       background-color: var(--background-color);
       color: var(--text-color);
       line-height: 1.6;
     }
 
-    /* Header = Brown (requested) */
+    /* Header = GOLD to match index */
     header {
-      background-color: var(--wmu-brown);
+      background-color: var(--primary-color);
       color: #fff;
-      padding: 1.5rem 1rem;
+      padding: 1.25rem 1rem;
       text-align: center;
     }
-
-    /* Hero trimmed so portfolio appears on first screen */
-    .hero {
-      padding: 2.5rem 1rem;
-      text-align: center;
-      background-color: #fff;
-    }
-
-    .hero h1 {
-      font-size: clamp(2rem, 3vw + 1rem, 3rem);
-      margin: 0 0 1rem 0;
-      line-height: 1.2;
-    }
-
-    .hero a.portfolio-button {
-      display: inline-block;
-      margin-top: 0.75rem;
-      padding: 1rem 2rem;
-      background-color: var(--wmu-brown);
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      font-size: 1.1rem;
-      transition: background-color 0.2s ease, transform 0.05s ease;
-    }
-    .hero a.portfolio-button:hover { background-color: var(--wmu-brown-dark); }
-    .hero a.portfolio-button:active { transform: translateY(1px); }
-    .hero a.portfolio-button:focus { outline: 3px solid var(--primary-color); outline-offset: 2px; }
 
     section {
-      padding: 2.25rem 1rem;
+      padding: 2rem 1rem;
       max-width: 1100px;
       margin: auto;
       text-align: center;
@@ -83,7 +52,7 @@
     .project {
       background: #fff;
       margin: 1.25rem 0;
-      padding: 1.5rem;
+      padding: 1.25rem;
       border: 1px solid #ddd;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.06);
@@ -104,12 +73,10 @@
       margin-top: 0.75rem;
     }
 
+    /* Responsive, no forced crop */
     .project-gallery img {
-      flex: 1 1 300px;
-      max-width: 32%;
-      min-width: 220px;
-      height: 200px;
-      object-fit: cover;
+      width: clamp(220px, 32%, 360px);
+      height: auto;
       border-radius: 8px;
       border: 1px solid #e5e5e5;
       background: #eee;
@@ -118,10 +85,9 @@
     ul { padding-left: 1.2rem; }
     li { margin: 0.25rem 0; }
 
-    /* Back button (kept brown) */
-    a.back-button {
+    /* Buttons = Brown */
+    .btn {
       display: inline-block;
-      margin: 2rem auto 0.5rem;
       padding: 0.9rem 1.5rem;
       background-color: var(--wmu-brown);
       color: #fff;
@@ -131,34 +97,26 @@
       font-size: 1rem;
       transition: background-color 0.2s ease, transform 0.05s ease;
     }
-    a.back-button:hover { background-color: var(--wmu-brown-dark); }
-    a.back-button:active { transform: translateY(1px); }
+    .btn:hover { background-color: var(--wmu-brown-dark); }
+    .btn:active { transform: translateY(1px); }
 
     footer {
-      background-color: var(--wmu-brown);
+      background-color: var(--primary-color);
       color: #fff;
       text-align: center;
       padding: 1rem 0;
       margin-top: 2rem;
     }
-
     footer p { margin: 0; }
   </style>
 </head>
 
 <body>
-
   <header>
     <p>&#128187; Amir Williams – Mechanical Engineering Portfolio</p>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1>Welcome to My Design Portfolio</h1>
-    <a href="#portfolio" class="portfolio-button">View My Portfolio</a>
-  </section>
-
-  <!-- Portfolio -->
+  <!-- Portfolio starts immediately (no hero on this page) -->
   <section id="portfolio" aria-label="Featured Projects">
     <h2>Featured Projects</h2>
 
@@ -179,7 +137,7 @@
         <img src="images/steering-column-2.png" alt="Steering column detail view">
         <img src="images/steering-column-3.png" alt="Steering column cockpit integration">
       </div>
-      <p>Custom lightweight steering column for the 2025 Baja vehicle, optimized for strength, ergonomics, and cockpit integration.</p>
+      <p>Custom lightweight steering column for the 2024 Baja vehicle, optimized for strength, ergonomics, and cockpit integration.</p>
     </div>
 
     <div class="project">
@@ -206,7 +164,7 @@
         <p>Improved diagnostics and functionality during testing.</p>
       </div>
       <div style="flex:1 1 300px;">
-        <img src="images/controls_box.jpg" alt="Controls subteam wiring and PDB" style="width:100%; border-radius:12px; height:260px; object-fit:cover; border:1px solid #e5e5e5;" />
+        <img src="images/controls_box.jpg" alt="Controls subteam wiring and PDB" style="width:100%; border-radius:12px; height:auto; border:1px solid #e5e5e5;" />
       </div>
     </div>
   </section>
@@ -219,19 +177,18 @@
         <p><strong>Bambu Lab X1 Carbon</strong> with AMS for multi-material prototyping. 3D printing accelerates iterative testing before final manufacturing.</p>
       </div>
       <div style="flex:1 1 300px;">
-        <img src="images/3d_printer.jpg" alt="Bambu X1C printer" style="width:100%; border-radius:12px; height:260px; object-fit:cover; border:1px solid #e5e5e5;" />
+        <img src="images/3d_printer.jpg" alt="Bambu X1C printer" style="width:100%; border-radius:12px; height:auto; border:1px solid #e5e5e5;" />
       </div>
     </div>
   </section>
 
   <!-- Back Button -->
   <div style="text-align:center;">
-    <a class="back-button" href="index.html">← Back to Home</a>
+    <a class="btn" href="index.html">← Back to Home</a>
   </div>
 
   <footer>
     <p>&copy; 2025 Amir Williams. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
