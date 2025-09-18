@@ -45,7 +45,6 @@
     margin: auto;
   }
 
-  /* All headings in brown */
   section h2 {
     color: var(--wmu-brown);
     font-size: 2rem;
@@ -78,7 +77,6 @@
     margin-top: 1rem;
   }
 
-  /* Responsive images, no forced crop */
   .project-gallery img {
     width: clamp(220px, 31%, 360px);
     height: auto;
@@ -87,7 +85,6 @@
     background: #eee;
   }
 
-  /* Force ALL links to stay brown (no purple visited) */
   a:link,
   a:visited {
     color: var(--wmu-brown);
@@ -98,7 +95,7 @@
     color: var(--wmu-brown-dark);
   }
 
-  /* Brown back button with all states handled */
+  /* Back button (bottom of page) */
   a.back-button:link,
   a.back-button:visited {
     display: inline-block;
@@ -134,6 +131,7 @@
 <section aria-label="Featured Projects">
   <h2>Featured Projects</h2>
 
+  <!-- Example projects -->
   <div class="project">
     <h3>First Pedal Design</h3>
     <div class="project-gallery">
@@ -141,7 +139,7 @@
       <img src="images/first-pedal-2.png" alt="First Pedal Design 2">
       <img src="images/first-pedal-3.png" alt="First Pedal Design 3">
     </div>
-    <p>Developed the initial pedal design focusing on ergonomic fit and durability under rugged off-road racing conditions. Key features included adjustability and a lightweight frame.</p>
+    <p>Developed the initial pedal design focusing on ergonomic fit and durability under rugged off-road racing conditions.</p>
     <p><strong>Skills used:</strong> SolidWorks, Mechanical Design, Pedal Mechanics</p>
   </div>
 
@@ -152,8 +150,7 @@
       <img src="images/steering-column-2.png" alt="Steering Column 2">
       <img src="images/steering-column-3.png" alt="Steering Column 3">
     </div>
-    <p>Designed a custom lightweight steering column for the 2025 Baja vehicle. Focused on strength, ergonomic placement, and integration with the steering assembly and driver cockpit layout.</p>
-    <p><strong>Skills used:</strong> SolidWorks, CAD Assembly Design, Ergonomics</p>
+    <p>Custom lightweight steering column optimized for strength, ergonomics, and cockpit integration.</p>
   </div>
 
   <div class="project">
@@ -162,8 +159,7 @@
       <img src="images/steering-column-bracket-1.png" alt="Steering Column Bracket 1">
       <img src="images/steering-column-bracket-2.png" alt="Steering Column Bracket 2">
     </div>
-    <p>Engineered a specialized bracket to secure the steering column with optimized support and vibration reduction, ensuring reliability during off-road performance.</p>
-    <p><strong>Skills used:</strong> Structural Design, FEA basics, SolidWorks</p>
+    <p>Bracket engineered to secure the steering column with improved support and vibration reduction.</p>
   </div>
 
   <div class="project">
@@ -173,8 +169,7 @@
       <img src="images/new-pedal-2.png" alt="New Pedal Design 2">
       <img src="images/new-pedal-3.png" alt="New Pedal Design 3">
     </div>
-    <p>Redesigned the pedal system to improve responsiveness and comfort. Integrated lessons learned from the first design with enhanced mechanical efficiency and adjustability features.</p>
-    <p><strong>Skills used:</strong> SolidWorks, Mechanical Redesign, User Experience Improvements</p>
+    <p>Redesigned the pedal system to improve responsiveness and comfort.</p>
   </div>
 
   <div class="project">
@@ -183,15 +178,12 @@
       <img src="images/switch-box-1.png" alt="Switch Box 1">
       <img src="images/switch-box-2.png" alt="Switch Box 2">
     </div>
-    <p>Compact, modular switch box to manage four-wheel drive controls and auxiliary systems. Designed for rugged environments with accessible toggles and secure wiring integration.</p>
-    <p><strong>Skills used:</strong> SolidWorks, Electrical Systems Integration</p>
+    <p>Compact switch box to manage 4WD controls and auxiliary systems.</p>
   </div>
 
-  <!-- Steering Yoke with SIX images -->
   <div class="project" id="steering-yoke">
     <h3>Steering Yoke</h3>
     <div class="project-gallery">
-      <!-- Make sure these file names and extensions match exactly in /images/ -->
       <img src="images/steering-yoke-1.png" alt="Steering Yoke 1">
       <img src="images/steering-yoke-2.png" alt="Steering Yoke 2">
       <img src="images/steering-yoke-3.png" alt="Steering Yoke 3">
@@ -199,15 +191,11 @@
       <img src="images/steering-yoke-5.png" alt="Steering Yoke 5">
       <img src="images/steering-yoke-6.png" alt="Steering Yoke 6">
     </div>
-    <p>Designed and optimized a steering yoke to connect critical steering components, focusing on strength, minimal weight, and efficient manufacturing for off-road performance.</p>
-    <p><strong>Skills used:</strong> SolidWorks, Mechanical Linkages, CAD Assembly Design</p>
+    <p>Steering yoke designed for strength, minimal weight, and efficient manufacturing.</p>
   </div>
-
-  <a class="back-button" href="index.html">← Back to Home</a>
 </section>
 
-<!-- Controls Subteam -->
-<section id="controls-subteam" aria-label="Controls Subteam">
+<section id="controls-subteam">
   <h2>Controls Subteam</h2>
   <div style="display:flex; flex-wrap:wrap; gap:1rem; align-items:flex-start; text-align:left;">
     <div style="flex:1 1 300px;">
@@ -217,7 +205,6 @@
         <li>Switch panel for 4WD and lights</li>
         <li>Sensor integration via Raspberry Pi + Pico</li>
       </ul>
-      <p>Improved diagnostics and functionality during testing.</p>
     </div>
     <div style="flex:1 1 300px;">
       <img src="images/controls_box.jpg" alt="Controls subteam wiring and PDB"
@@ -226,8 +213,7 @@
   </div>
 </section>
 
-<!-- 3D Printing -->
-<section id="3d-printing" aria-label="3D Printing">
+<section id="3d-printing">
   <h2>3D Printing</h2>
   <div style="display:flex; flex-wrap:wrap; gap:1rem; align-items:flex-start; text-align:left;">
     <div style="flex:1 1 300px;">
@@ -239,6 +225,11 @@
     </div>
   </div>
 </section>
+
+<!-- Back button at the very bottom -->
+<div style="text-align:center; margin-bottom:2rem;">
+  <a class="back-button" href="index.html">← Back to Home</a>
+</div>
 
 <footer>
   <p>&copy; 2025 Amir Williams. All rights reserved.</p>
